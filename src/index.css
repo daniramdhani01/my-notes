@@ -1,0 +1,146 @@
+body{
+  background-color: #FFF5E4;
+  margin: 0px;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #6A9C89;
+  color: white;
+  padding: 0px 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: sticky;
+  top: 0;
+}
+.main-padding{
+  padding: 0px 70px;
+}
+.container-input{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.container{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 5px 20px 30px 20px;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.note-input{
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form > span {
+  text-align: end;
+}
+.btn {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  
+}
+.btn-primary{
+  background-color: #6A9C89;
+  border: 2px solid #6A9C89;
+  color: white;
+}
+.btn-primary:hover{
+  background-color: white;
+  border: 2px solid #6A9C89;
+  color: #6A9C89;
+}
+.btn-danger{
+  background-color: transparent;
+  border: 2px solid #C7253E;
+  color: #C7253E;
+}
+.btn-danger:hover{
+  background-color: #C7253E;
+  border: 2px solid #C7253E;
+  color: white;
+}
+.btn-transparent{
+  background-color: transparent;
+  border: 2px solid #6A9C89;
+  color: #6A9C89;
+}
+.btn-transparent:hover{
+  background-color: #6A9C89;
+  border: 2px solid #6A9C89;
+  color: white;
+}
+.note-error{
+  color: red;
+}
+
+header input{
+  border-color: #FFF5E4;
+}
+
+input, textarea {
+  padding: 10px;
+  min-width: 300px;
+  border-radius: 5px;
+  border: 2px solid #6A9C89;
+  resize: vertical;
+}
+
+input:focus, textarea:focus {
+  border: 2px solid orange;
+}
+
+.notes-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 15px;
+}
+.card{
+  width: 350px;
+  border:  2px solid #6A9C89;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.card-title{
+  margin: 0px;
+}
+.card-date{
+  margin: 0px;
+  color: darkgrey;
+}
+.card-body{
+  text-align: justify;
+  margin-top: 5px;
+  flex: 1;
+}
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 5px;
+}
+.card-footer button {
+  flex: 1;
+}
+/* mobile experience */
+@media screen and (max-width: 800px) { 
+  .main-padding{
+    padding: 10px 10px;
+  }
+  .note-input{
+    width: 90%;
+  }
+} 
