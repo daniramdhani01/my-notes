@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { dateFormat } from '../helper/globalHelper';
+import { dateFormat } from '../utils/globalHelper';
 
 export default class Notes extends Component {
 constructor(props) {

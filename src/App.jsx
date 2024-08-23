@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import TopBar from './components/TopBar';
-import { notes } from './helper/dataDummy';
+import { notes } from './utils/dataDummy';
 import Notes from './components/Notes';
 
 export default class App extends Component {
@@ -104,17 +104,25 @@ export default class App extends Component {
             <section>
               <h2>Catatan Aktif</h2>
               <div className='notes-list'>
-                {this.state.notes.filter(item => item.archived === false).map(item =>(
+                {this.state.notes.filter(item => item.archived === false).length > 0 ? 
+                this.state.notes.filter(item => item.archived === false).map(item =>(
                   <Notes item={item} handleActivationNote={this.handleActivationNote} handleDeleteNote={this.handleDeleteNote}/>
-                ))}
+                ))
+                :
+                <>Tidak ada catatan</>
+                }
               </div>
             </section>
             <section>
               <h2>Arsip</h2>
               <div className='notes-list'>
-                {this.state.notes.filter(item => item.archived === true).map(item =>(
+                {this.state.notes.filter(item => item.archived === true).length > 0 ? 
+                this.state.notes.filter(item => item.archived === true).map(item =>(
                   <Notes item={item} handleActivationNote={this.handleActivationNote} handleDeleteNote={this.handleDeleteNote}/>
-                ))}
+                ))
+                :
+                <>Tidak ada catatan</>
+              }
               </div>
             </section>
             </main>
