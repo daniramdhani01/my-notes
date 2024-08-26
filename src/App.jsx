@@ -38,7 +38,7 @@ export default class App extends Component {
       title: this.state.inputTitle,
       body: this.state.inputBody,
       archived: false,
-      createdAt: new Date().toISOString().toString()
+      createdAt: new Date().toISOString("id-ID", { timeZone: "Asia/Jakarta" }).toString()
     })
     
     this.setState({
